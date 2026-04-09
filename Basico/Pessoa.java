@@ -11,9 +11,9 @@ public class Pessoa{
     }
 
     //Metodo
-    public void mostrarDados(String nome1, int idade1){
-        System.out.println("Nome: " + nome1);
-        System.out.println("Idade: " + idade1);
+    public void mostrarDados(){
+        System.out.println("Nome: " + getNome());
+        System.out.println("Idade: " + getIdade());
     }
 
     //Encapsulamento
@@ -30,7 +30,11 @@ public class Pessoa{
     }
 
     public void setIdade(int idade){
-        this.idade = idade;
+        if( idade >= 0){
+            this.idade = idade;
+        }
+        else
+            System.out.println("Idade invalida, não exixte idade negativa!");
     }
 
 }
